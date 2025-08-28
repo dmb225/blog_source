@@ -1,9 +1,7 @@
-Title: Hello world
+Title: Algorithm Patterns: Two Pointers
 Date: 2025-08-28
 Category: Blog
 Tags: algorithms
-
-# The Two Pointers Pattern
 
 The **two pointers** pattern is a versatile and efficient technique widely used in algorithmic problem-solving, especially when working with sequential data structures like arrays, strings, or linked lists. As the name suggests, this approach involves maintaining two pointers (or indices) that traverse the data structure in a coordinated manner—often starting from different positions or moving in opposite directions. By dynamically adjusting these pointers based on specific conditions, we can efficiently explore the data and solve problems with optimal time and space complexity.
 
