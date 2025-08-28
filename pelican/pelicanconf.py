@@ -1,6 +1,6 @@
 AUTHOR = 'Dao Malick BENIN'
-SITENAME = 'technotes'
-SITEURL = ""
+SITENAME = 'Dao Malick BENIN'
+SITEURL = "https://dmb225.github.io"
 
 PATH = "content"
 
