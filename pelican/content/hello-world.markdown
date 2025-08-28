@@ -1,5 +1,6 @@
 Title: Hello world
 Date: 2025-08-20
+Category: Blog
 
 Hello world! My name is Dao Malick BENIN.
 

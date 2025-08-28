@@ -1,6 +1,6 @@
 AUTHOR = 'Dao Malick BENIN'
 SITENAME = 'Dao Malick BENIN'
-SITEURL = "https://dmb225.github.io"
+SITEURL = ""
 
 PATH = "content"
 
