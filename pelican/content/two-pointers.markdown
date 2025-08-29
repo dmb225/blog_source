@@ -9,7 +9,7 @@ Whenever you need to find two elements in a sequence that satisfy a certain cond
 
 ---
 
-## About the Pattern
+## About the pattern
 
 The two pointers technique is particularly useful when:
 
@@ -21,7 +21,7 @@ The pointers can move in the same direction, in opposite directions, or even tra
 
 ---
 
-## Example: Checking for Palindromes
+## Example: Checking for palindromes
 
 A classic example is checking if a string is a palindrome (reads the same forwards and backwards). Here, one pointer starts at the beginning and the other at the end, moving towards each other while comparing characters.
 
@@ -63,33 +63,31 @@ A naive approach might use nested loops, resulting in O(n²) time complexity. Th
 
 ---
 
-## More Examples
+## More examples
 
 Here are some classic problems that benefit from the two pointers pattern:
 
-1. **Reversing an Array**  
+1. **Reversing an array**  
    Reverse an array in place by swapping elements from both ends, moving towards the center.
 
-2. **Pair with Given Sum in a Sorted Array**  
+2. **Pair with given sum in a sorted array**  
    Given a sorted array and a target sum, use two pointers (one at the start, one at the end) to find a pair that adds up to the target.
 
 ---
 
-## Real-World Applications
+## Real-world problems
 
-The two pointers pattern isn't just for coding interviews—it appears in real-world systems too. For example:
+The two pointers pattern isn't just for coding interviews. It appears in real-world systems too. For example:
 
-- **Memory Management:**  
+- **Memory management:**  
   In memory allocation, two pointers can represent the start and end of a memory block. Allocation moves the start pointer forward; deallocation can move it backward, efficiently managing available memory.
 
 ---
 
-## Does Your Problem Match This Pattern?
+## Does your problem match this pattern?
 
 Consider using the two pointers technique if:
 
-- **Linear Data Structure:** Your input is a sequence (array, string, linked list).
-- **Process Pairs:** You need to process or compare elements at two different positions.
-- **Dynamic Pointer Movement:** Both pointers can move independently based on certain conditions.
-
----
+- **Linear data structure:** Your input is a sequence (array, string, linked list).
+- **Process pairs:** You need to process or compare elements at two different positions.
+- **Dynamic pointer movement:** Both pointers can move independently based on certain conditions.
