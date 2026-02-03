@@ -1,7 +1,7 @@
-Title: System Design: Lesson 2 - Introduction to Domain Name System (DNS)
+Title: System Design: Lesson 2.1 - Introduction to Domain Name System (DNS)
 Date: 2026-02-03
 Category: Blog
-Tags: system-design
+Tags: system-design, dns
 
 ## The origins of DNS
 Let’s consider the example of a mobile phone where a unique number is associated with each user. To make calls to friends, we can initially try to memorize some of the phone numbers. However, as the number of contacts grows, we’ll have to use a phone book to keep track of all our contacts. This way, whenever we need to make a call, we’ll refer to the phone book and dial the number we need.

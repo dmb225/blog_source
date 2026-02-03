@@ -1,7 +1,7 @@
-Title: System Design: Lesson 3 - How the Domain Name System works
+Title: System Design: Lesson 2.2 - How the Domain Name System works
 Date: 2026-02-03
 Category: Blog
-Tags: system-design
+Tags: system-design, dns
 
 Through this lesson, we’ll answer the following questions:
 
@@ -12,17 +12,16 @@ Through this lesson, we’ll answer the following questions:
 Let’s get started.
 
 ## DNS hierarchy
-
 As stated before, the DNS isn’t a single server that accepts requests and responds to user queries. It’s a complete infrastructure with name servers at different hierarchies.
 
 There are mainly four types of servers in the DNS hierarchy:
 
 - DNS resolver: Resolvers initiate the querying sequence and forward requests to the other DNS name servers. Typically, DNS resolvers lie within the premise of the user’s network. However, DNS resolvers can also cater to users’ DNS queries through caching techniques, as we will see shortly. These servers can also be called local or default servers.
-- Root-level name servers: These servers receive requests from local servers. Root name servers maintain name servers based on top-level domain names, such as .com, .edu, .us, and so on. For instance, when a user requests the IP address of google.com, root-level name servers will return a list of top-level domain (TLD) servers that hold the IP addresses of the .io domain.
+- Root-level name servers: These servers receive requests from local servers. Root name servers maintain name servers based on top-level domain names, such as .com, .edu, .us, and so on. For instance, when a user requests the IP address of google.com, root-level name servers will return a list of top-level domain (TLD) servers that hold the IP addresses of the .com domain.
 - Top-level domain (TLD) name servers: These servers hold the IP addresses of authoritative name servers. The querying party will get a list of IP addresses that belong to the authoritative servers of the organization.
 - Authoritative name servers: These are the organization’s DNS name servers that provide the IP addresses of the web or application servers.
 
-**DNS names are processed from right to left, unlike UNIX file paths that go from left to right. For example, when resolving google.com, the resolver first looks up .io, then educative. Visually, the DNS hierarchy forms a tree structure, starting from the root domain at the top and branching out to subdomains.**
+**DNS names are processed from right to left, unlike UNIX file paths that go from left to right. For example, when resolving google.com, the resolver first looks up .com, then google. Visually, the DNS hierarchy forms a tree structure, starting from the root domain at the top and branching out to subdomains.**
 
 ## Iterative versus recursive query resolution
 There are two ways to perform a DNS query:
