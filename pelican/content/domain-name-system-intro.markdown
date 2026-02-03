@@ -1,4 +1,4 @@
-Title: System Design: Introduction to Domain Name System (DNS)
+Title: System Design: Lesson 2 - Introduction to Domain Name System (DNS)
 Date: 2026-02-03
 Category: Blog
 Tags: system-design
@@ -6,7 +6,7 @@ Tags: system-design
 ## The origins of DNS
 Let’s consider the example of a mobile phone where a unique number is associated with each user. To make calls to friends, we can initially try to memorize some of the phone numbers. However, as the number of contacts grows, we’ll have to use a phone book to keep track of all our contacts. This way, whenever we need to make a call, we’ll refer to the phone book and dial the number we need.
 
-Similarly, computers are uniquely identified by IP addresses—for example, 104.18.2.119 is an IP address. We use IP addresses to visit a website hosted on a machine. Since humans cannot easily remember IP addresses to visit domain names (an example domain name being educative.io), we need a phone book-like repository that can maintain all mappings of domain names to IP addresses. In this chapter, we’ll see how DNS serves as the Internet’s phone book.
+Similarly, computers are uniquely identified by IP addresses—for example, 104.18.2.119 is an IP address. We use IP addresses to visit a website hosted on a machine. Since humans cannot easily remember IP addresses to visit domain names (an example domain name being google.com), we need a phone book-like repository that can maintain all mappings of domain names to IP addresses. In this chapter, we’ll see how DNS serves as the Internet’s phone book.
 
 ---
 
@@ -18,9 +18,7 @@ The entire operation is performed very quickly. Therefore, the end user experien
 #### ? Question ?
 Imagine two users enter the same domain name at the exact same time. How does DNS ensure both reach the correct server?
 
-Use the AI assessment widget below to submit your solution and get an interactive response.
-
-**Solution: DNS is a distributed system with multiple servers that resolve domain names independently. It ensures consistency by directing both users to the current IP address of the server, using caching, propagation, and authoritative DNS records. This way, even if two users enter the same domain name at the exact same time, they will both reach the correct server without any conflict. Keep exploring!**
+**Solution: DNS is a distributed system with multiple servers that resolve domain names independently. It ensures consistency by directing both users to the current IP address of the server, using caching, propagation, and authoritative DNS records. This way, even if two users enter the same domain name at the exact same time, they will both reach the correct server without any conflict.**
 
 ## Important details
 Let’s highlight some of the important details about DNS, some of which we’ll cover in the next lesson:
@@ -32,10 +30,10 @@ Let’s highlight some of the important details about DNS, some of which we’ll
 
 | Type  | Description                                                     | Name        | Value           | Example (Type, Name, Value)                                      |
 |-------|-----------------------------------------------------------------|-------------|-----------------|------------------------------------------------------------------|
-| A     | Provides the hostname to IP address mapping                     | Hostname    | IP address     | (A, relay1.main.educative.io, 104.18.2.119)                       |
-| NS    | Provides the hostname that is the authoritative DNS for a domain | Domain name | Hostname       | (NS, educative.io, dns.educative.io)                              |
-| CNAME | Provides the mapping from alias to canonical hostname            | Hostname    | Canonical name | (CNAME, educative.io, server1.primary.educative.io)               |
-| MX    | Provides the mapping of mail server from alias to canonical host | Hostname    | Canonical name | (MX, mail.educative.io, mailserver1.backup.educative.io)          |
+| A     | Provides the hostname to IP address mapping                     | Hostname    | IP address     | (A, relay1.main.google.com, 104.18.2.119)                       |
+| NS    | Provides the hostname that is the authoritative DNS for a domain | Domain name | Hostname       | (NS, google.com, dns.google.com)                              |
+| CNAME | Provides the mapping from alias to canonical hostname            | Hostname    | Canonical name | (CNAME, google.com, server1.primary.google.com)               |
+| MX    | Provides the mapping of mail server from alias to canonical host | Hostname    | Canonical name | (MX, mail.google.com, mailserver1.backup.google.com)          |
 
 
 - Caching: DNS uses caching at different layers to reduce request latency for the user. Caching plays an important role in reducing the burden on DNS infrastructure because it has to cater to the queries of the entire Internet.

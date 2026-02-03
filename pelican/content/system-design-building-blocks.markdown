@@ -1,4 +1,4 @@
-Title: System Design: Building Blocks
+Title: System Design: Lesson 1 - Building Blocks
 Date: 2026-02-03
 Category: Blog
 Tags: system-design
